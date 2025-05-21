@@ -1,4 +1,4 @@
-# 免费ClashX节点 - 5月21日22M/S|免费Shadowrocket/SSR/Clash/V2ray节点链接分享  更新时间 2025-05-21 19:37:20
+# 免费ClashX节点 - 5月21日21.5M/S|免费Shadowrocket/Clash/V2ray/SSR节点链接分享  更新时间 2025-05-21 19:40:58
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://free-clashx.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
