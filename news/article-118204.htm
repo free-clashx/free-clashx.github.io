@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://free-clashx.github.io/news/article-118204.htm" />
+    <title>破解难题：Shadowrocket无法连接4G网络的全方位排查与解决方案</title>
+        <meta name="description" content="在如今这个高度依赖互联网的时代，无论是访问海外资料、登录社交平台，还是观看境外视频资源，科学上网工具已然成为很多用户的“刚需”。在iOS用户中，Shadowrocket（小火箭）以其轻便、高效、强大的" />
+        <link rel="icon" href="/assets/website/img/v2ray_node/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费ClashX节点订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://free-clashx.github.io/news/article-118204.htm" />
+    <meta property="og:site_name" content="免费ClashX节点订阅中文网" />
+    <meta property="og:title" content="破解难题：Shadowrocket无法连接4G网络的全方位排查与解决方案" />
+    <meta property="og:image" content="https://free-clashx.github.io/uploads/20240810/576e2849d154a2569f03a0e1904fcf9e.webp" />
+        <meta property="og:release_date" content="2025-05-25T08:58:38" />
+    <meta property="og:updated_time" content="2025-05-25T08:58:38" />
+        <meta property="og:description" content="在如今这个高度依赖互联网的时代，无论是访问海外资料、登录社交平台，还是观看境外视频资源，科学上网工具已然成为很多用户的“刚需”。在iOS用户中，Shadowrocket（小火箭）以其轻便、高效、强大的" />
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="破解难题：Shadowrocket无法连接4G网络的全方位排查与解决方案">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/v2ray_node/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/fonts/v2ray_node/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P488D7SLHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P488D7SLHL');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854" crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-page="detail">
+    <div class="site-wrap">
+            
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3">
+                        <a href="/" class="h2 mb-0">
+                                                <span class="mb-0 site-logo"><span>免费 ClashX</span></span>
+                                                </a>
+                    </div>
+                    <div class="col-12 col-md-9 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+        <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/assets/website/img/v2ray_node/hero_1.jpg);" data-aos="fade" id="home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mt-lg-5 mr-auto text-left align-self-end align-self-md-center">
+                        <h1>破解难题：Shadowrocket无法连接4G网络的全方位排查与解决方案</h1>
+                        <p><a href="/">首页</a> <span class="mx-3">&bullet;</span> <a href="/news/">新闻资讯</a> <span class="mx-3">&bullet;</span> 正文</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="site-section" id="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="40" data-end="223">在如今这个高度依赖互联网的时代，无论是访问海外资料、登录社交平台，还是观看境外视频资源，科学上网工具已然成为很多用户的“刚需”。在iOS用户中，<strong data-start="112" data-end="128">Shadowrocket</strong>（小火箭）以其轻便、高效、强大的分流规则支持，成为使用最广泛的代理工具之一。然而，在实际使用过程中，许多用户都会遇到一个令人头疼的问题：<strong data-start="196" data-end="222">Shadowrocket在4G网络下无法连接</strong>。</p>
+<p data-start="225" data-end="313">明明Wi-Fi下运行一切正常，切换到4G就“秒失联”？别慌，本篇文章将带你<strong data-start="262" data-end="288">深入分析原因、逐步排查问题、提供实用解决方案</strong>，让你在4G网络下也能畅游网络世界，不再“卡壳”。</p>
+<hr data-start="315" data-end="318">
+<h2 data-start="320" data-end="355">一、什么是Shadowrocket？为什么它在4G下容易出问题？</h2>
+<p data-start="357" data-end="477"><strong data-start="357" data-end="373">Shadowrocket</strong> 是一款基于 iOS 平台开发的网络代理工具，支持多种协议（如Shadowsocks、Vmess、Trojan等）以及自定义分流规则，允许用户通过自建或订阅代理服务器，实现访问被屏蔽内容、加速网络连接的目的。</p>
+<p data-start="479" data-end="584">其核心机制依赖于系统的VPN接口进行流量转发，这就意味着它对<strong data-start="509" data-end="532">设备网络状态、系统设置、网络运营商策略</strong>等因素都极其敏感。特别是在4G/5G环境下，与Wi-Fi相比，存在更多不可控因素，从而容易导致连接失败。</p>
+<hr data-start="586" data-end="589">
+<h2 data-start="591" data-end="628">二、为什么Shadowrocket无法在4G下使用？常见原因逐个解析</h2>
+<h3 data-start="630" data-end="644">1. 网络本身的问题</h3>
+<ul data-start="645" data-end="808">
+<li data-start="645" data-end="689">
+<p data-start="647" data-end="689"><strong data-start="647" data-end="659">信号弱或不稳定：</strong> 若所在区域4G信号微弱，代理流量会因丢包或超时而连接失败；</p>
+</li>
+<li data-start="690" data-end="737">
+<p data-start="692" data-end="737"><strong data-start="692" data-end="707">数据网络被限速或阻断：</strong> 某些运营商可能会对VPN协议进行QoS限速，甚至直接封锁；</p>
+</li>
+<li data-start="738" data-end="779">
+<p data-start="740" data-end="779"><strong data-start="740" data-end="757">SIM卡异常或未正确插入：</strong> SIM识别异常将直接导致移动数据无法使用；</p>
+</li>
+<li data-start="780" data-end="808">
+<p data-start="782" data-end="808"><strong data-start="782" data-end="795">无套餐或流量用尽：</strong> 这一点很多用户容易忽视。</p>
+</li>
+</ul>
+<h3 data-start="810" data-end="826">2. 设备与系统设置问题</h3>
+<ul data-start="827" data-end="962">
+<li data-start="827" data-end="862">
+<p data-start="829" data-end="862"><strong data-start="829" data-end="843">未启用“蜂窝数据”：</strong> 设置里未打开对应应用的数据访问权限；</p>
+</li>
+<li data-start="863" data-end="912">
+<p data-start="865" data-end="912"><strong data-start="865" data-end="881">iOS VPN配置异常：</strong> 系统层VPN配置与Shadowrocket冲突或未正确配置；</p>
+</li>
+<li data-start="913" data-end="962">
+<p data-start="915" data-end="962"><strong data-start="915" data-end="934">低版本iOS或存在系统BUG：</strong> 尤其在系统越狱、装了某些描述文件的设备上，冲突更明显。</p>
+</li>
+</ul>
+<h3 data-start="964" data-end="979">3. 应用本身设置错误</h3>
+<ul data-start="980" data-end="1100">
+<li data-start="980" data-end="1014">
+<p data-start="982" data-end="1014"><strong data-start="982" data-end="995">服务器节点不可用：</strong> 代理服务器失效、IP被封或配置错误；</p>
+</li>
+<li data-start="1015" data-end="1055">
+<p data-start="1017" data-end="1055"><strong data-start="1017" data-end="1028">规则设置错误：</strong> 设置不当导致Shadowrocket未成功接管流量；</p>
+</li>
+<li data-start="1056" data-end="1100">
+<p data-start="1058" data-end="1100"><strong data-start="1058" data-end="1078">权限未授予或被系统限制后台运行：</strong> 应用未获完全权限，或后台切换后被系统终止。</p>
+</li>
+</ul>
+<h3 data-start="1102" data-end="1115">4. 外部软件冲突</h3>
+<ul data-start="1116" data-end="1205">
+<li data-start="1116" data-end="1165">
+<p data-start="1118" data-end="1165"><strong data-start="1118" data-end="1135">防火墙/家长控制软件拦截：</strong> 比如在系统开启“屏幕使用时间”限制时，可能限制了网络行为；</p>
+</li>
+<li data-start="1166" data-end="1205">
+<p data-start="1168" data-end="1205"><strong data-start="1168" data-end="1184">其他VPN类APP干扰：</strong> iOS系统不支持同时运行多个VPN通道。</p>
+</li>
+</ul>
+<hr data-start="1207" data-end="1210">
+<h2 data-start="1212" data-end="1244">三、Shadowrocket无法连接4G时的系统性排查流程</h2>
+<p data-start="1246" data-end="1279">遇到小火箭在4G下失效，切忌盲目操作，应按以下顺序进行检查和排除。</p>
+<h3 data-start="1281" data-end="1302">第一步：初步核查——网络与系统设置</h3>
+<p data-start="1304" data-end="1370">✔ <strong data-start="1306" data-end="1323">确认“蜂窝移动数据”开启：</strong><br data-start="1323" data-end="1326">
+进入「设置」→「蜂窝移动网络」→ 确保对Shadowrocket开启了数据使用权限。</p>
+<p data-start="1372" data-end="1434">✔ <strong data-start="1374" data-end="1387">测试网络是否通畅：</strong><br data-start="1387" data-end="1390">
+用Safari打开网页、Ping公共地址（如8.8.8.8）判断是否为4G本身断网问题。</p>
+<p data-start="1436" data-end="1476">✔ <strong data-start="1438" data-end="1449">尝试重启手机：</strong><br data-start="1449" data-end="1452">
+不少临时性的系统冲突或APN异常可通过重启解决。</p>
+<p data-start="1478" data-end="1546">✔ <strong data-start="1480" data-end="1494">关闭Wi-Fi重测：</strong><br data-start="1494" data-end="1497">
+Shadowrocket某些配置下仅在Wi-Fi工作，需在“设置”中勾选“蜂窝移动数据下也启用”。</p>
+<hr data-start="1548" data-end="1551">
+<h3 data-start="1553" data-end="1569">第二步：代理配置全面检查</h3>
+<p data-start="1571" data-end="1640">✔ <strong data-start="1573" data-end="1585">核实服务器状态：</strong><br data-start="1585" data-end="1588">
+使用Shadowrocket的“节点测试”功能，查看延迟与连通性。若状态为“X”，说明节点不可用或被墙。</p>
+<p data-start="1642" data-end="1686">✔ <strong data-start="1644" data-end="1657">重新导入订阅链接：</strong><br data-start="1657" data-end="1660">
+代理服务有更新时，原有节点可能失效，需及时刷新订阅。</p>
+<p data-start="1688" data-end="1755">✔ <strong data-start="1690" data-end="1705">尝试更换协议或服务器：</strong><br data-start="1705" data-end="1708">
+有些网络对某类协议（如VMess）屏蔽严重，可尝试换成Shadowsocks、Trojan等。</p>
+<p data-start="1757" data-end="1802">✔ <strong data-start="1759" data-end="1776">禁用“自动切换”模式测试：</strong><br data-start="1776" data-end="1779">
+部分自动规则会判断为“非目标流量”而放弃代理。</p>
+<hr data-start="1804" data-end="1807">
+<h3 data-start="1809" data-end="1826">第三步：系统与权限调整建议</h3>
+<p data-start="1828" data-end="1881">✔ <strong data-start="1830" data-end="1845">升级到最新iOS系统：</strong><br data-start="1845" data-end="1848">
+旧版本系统兼容性差，部分版本对第三方VPN限制较多，建议保持更新。</p>
+<p data-start="1883" data-end="1921">✔ <strong data-start="1885" data-end="1901">彻底关闭其他VPN软件：</strong><br data-start="1901" data-end="1904">
+即便未开启，也可能在后台产生干扰。</p>
+<p data-start="1923" data-end="1977">✔ <strong data-start="1925" data-end="1945">关闭“屏幕时间”限制或描述文件：</strong><br data-start="1945" data-end="1948">
+青少年保护类配置会干预VPN行为，建议移除相关设置后重试。</p>
+<hr data-start="1979" data-end="1982">
+<h3 data-start="1984" data-end="2002">第四步：联系运营商与进阶排障</h3>
+<p data-start="2004" data-end="2058">✔ <strong data-start="2006" data-end="2026">确认是否存在“非正常流量封锁”：</strong><br data-start="2026" data-end="2029">
+部分地区的运营商可能自动封锁VPN流量，尤其是UDP数据。</p>
+<p data-start="2060" data-end="2119">✔ <strong data-start="2062" data-end="2092">申请公共APN或使用特殊网络策略卡（如定制免流卡）：</strong><br data-start="2092" data-end="2095">
+对于频繁使用代理的用户，这是较为理想的解决方案。</p>
+<p data-start="2121" data-end="2192">✔ <strong data-start="2123" data-end="2142">考虑添加TLS伪装或混淆插件：</strong><br data-start="2142" data-end="2145">
+使用如Shadowsocks+Obfs、V2Ray+WS+TLS等配置，可大幅绕过QoS限速。</p>
+<hr data-start="2194" data-end="2197">
+<h2 data-start="2199" data-end="2231">四、实用FAQ合集：Shadowrocket 4G问题速查</h2>
+<blockquote data-start="2233" data-end="2294">
+<p data-start="2235" data-end="2294"><strong data-start="2235" data-end="2259">Q1：为何Wi-Fi下能用，4G就不行？</strong><br data-start="2259" data-end="2262">
+A：通常是移动数据未授权、VPN接口异常或代理被运营商拦截所致。</p>
+</blockquote>
+<blockquote data-start="2296" data-end="2359">
+<p data-start="2298" data-end="2359"><strong data-start="2298" data-end="2315">Q2：频繁更换节点有效吗？</strong><br data-start="2315" data-end="2318">
+A：有效。部分节点IP易被识别封锁，定期更新或选择高混淆协议是保障使用体验的关键。</p>
+</blockquote>
+<blockquote data-start="2361" data-end="2420">
+<p data-start="2363" data-end="2420"><strong data-start="2363" data-end="2384">Q3：测试通过但仍无法上网怎么办？</strong><br data-start="2384" data-end="2387">
+A：检查是否启用了全局模式，或者分流规则是否将目标网站错归为直连。</p>
+</blockquote>
+<blockquote data-start="2422" data-end="2507">
+<p data-start="2424" data-end="2507"><strong data-start="2424" data-end="2457">Q4：是否需要越狱才能让Shadowrocket完全运行？</strong><br data-start="2457" data-end="2460">
+A：完全不需要。Shadowrocket是App Store上架的正规应用，功能完善无需越狱。</p>
+</blockquote>
+<hr data-start="2509" data-end="2512">
+<h2 data-start="2514" data-end="2540">五、进阶建议：从“能用”走向“好用”的优化技巧</h2>
+<ul data-start="2542" data-end="2711">
+<li data-start="2542" data-end="2581">
+<p data-start="2544" data-end="2581"><strong data-start="2544" data-end="2558">使用高质量订阅服务：</strong> 选择稳定运营、有备用节点与混淆功能的服务商；</p>
+</li>
+<li data-start="2582" data-end="2618">
+<p data-start="2584" data-end="2618"><strong data-start="2584" data-end="2600">开启测速与自动切换功能：</strong> 在多节点间自由切换，确保连接质量；</p>
+</li>
+<li data-start="2619" data-end="2659">
+<p data-start="2621" data-end="2659"><strong data-start="2621" data-end="2634">学习配置分流规则：</strong> 根据App类型或域名分类分流，提升稳定性与速度；</p>
+</li>
+<li data-start="2660" data-end="2711">
+<p data-start="2662" data-end="2711"><strong data-start="2662" data-end="2674">开启UDP转发：</strong> 若需游戏加速或语音通话功能，需确保支持UDP（部分4G网络限制UDP）。</p>
+</li>
+</ul>
+<hr data-start="2713" data-end="2716">
+<h2 data-start="2718" data-end="2737">六、结语：全面掌控，告别网络盲点</h2>
+<p data-start="2739" data-end="2839">Shadowrocket作为科学上网工具的“扛把子”，虽强大却也脆弱。在Wi-Fi环境下如鱼得水，在4G环境中却容易“水土不服”。这并非应用问题，而是多种网络机制、权限控制、运营商政策共同作用的结果。</p>
+<p data-start="2841" data-end="2930">本文以详实的逻辑结构、实用的操作建议，覆盖了Shadowrocket 4G连接失败的各类可能，从设备、应用、网络、系统多个维度展开，为广大用户提供了一份实用性极强的“排障宝典”。</p>
+<hr data-start="2932" data-end="2935">
+<h3 data-start="2937" data-end="2944">点评：</h3>
+<p data-start="2946" data-end="3122" data-is-last-node="" data-is-only-node="">这篇文章不仅结构清晰、逻辑严谨，而且贴近实际场景，充分考虑到了用户的真实使用痛点。从问题提出到解决策略，层层递进、干货满满。同时配有FAQ和进阶建议，极大提升了可操作性。语言专业又不失通俗，既适合小白用户，也适合资深玩家收藏学习。可以说，这是一次“知识+实战”完美结合的技术写作典范——为Shadowrocket用户扫清障碍，让科学上网更自由、更安心。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-117895.htm">冲突无处不在：全面剖析人际冲突的四种模式与应对智慧</a></p>
+                                        <p>下一个：<a href="/news/article-118507.htm">穿越信息壁垒：免费科学上网工具与实用方法全解析</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-117895.htm" title="冲突无处不在：全面剖析人际冲突的四种模式与应对智慧">冲突无处不在：全面剖析人际冲突的四种模式与应对智慧</a></li>
+                        <li class="py-2"><a href="/news/article-117255.htm" title="搭建高效安全网络通道：Nginx反向代理Vmess的完整实战指南">搭建高效安全网络通道：Nginx反向代理Vmess的完整实战指南</a></li>
+                        <li class="py-2"><a href="/news/article-118204.htm" title="破解难题：Shadowrocket无法连接4G网络的全方位排查与解决方案">破解难题：Shadowrocket无法连接4G网络的全方位排查与解决方案</a></li>
+                        <li class="py-2"><a href="/news/article-118507.htm" title="穿越信息壁垒：免费科学上网工具与实用方法全解析">穿越信息壁垒：免费科学上网工具与实用方法全解析</a></li>
+                        <li class="py-2"><a href="/news/article-118817.htm" title="深入掌握 Clash 留驻后台：打造持续稳定的科学上网环境">深入掌握 Clash 留驻后台：打造持续稳定的科学上网环境</a></li>
+                        <li class="py-2"><a href="/news/article-117170.htm" title="科学上网耗电快揭秘：深度分析与实用节电攻略">科学上网耗电快揭秘：深度分析与实用节电攻略</a></li>
+                        <li class="py-2"><a href="/news/article-117581.htm" title="深度解析Clash：版本区别与实用应用全指南">深度解析Clash：版本区别与实用应用全指南</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer class="site-footer">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class="border-top">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">免费ClashX节点订阅中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-3.3.1.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-migrate-3.0.1.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-ui.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/popper.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/bootstrap.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/owl.carousel.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.stellar.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.easing.1.3.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/aos.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.fancybox.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.sticky.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/main.js"></script>
+      <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+      <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>
